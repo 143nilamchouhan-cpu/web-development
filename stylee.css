@@ -1,0 +1,251 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+
+:root {
+    --bg-color: #f4f7fc;
+    --card-color: #ffffff;
+    --text-color: #222;
+    --primary-color: #2563eb;
+    --secondary-color: #60a5fa;
+    --shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Dark Theme */
+.dark-mode {
+    --bg-color: #121212;
+    --card-color: #1f1f1f;
+    --text-color: #ffffff;
+    --primary-color: #3b82f6;
+    --secondary-color: #60a5fa;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    transition:0.4s;
+    line-height:1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 5%;
+    background:var(--card-color);
+    box-shadow:var(--shadow);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:var(--primary-color);
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text-color);
+    font-weight:600;
+}
+
+#theme-toggle{
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    border-radius:50%;
+    background:var(--primary-color);
+    color:white;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.grid-container{
+    display:grid;
+    gap:2rem;
+    padding:2rem 5%;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2rem;
+    align-items:center;
+    background:var(--card-color);
+    padding:2rem;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.hero img{
+    width:100%;
+    max-width:350px;
+    margin:auto;
+    border-radius:20px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    margin-bottom:20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    background:var(--card-color);
+    padding:2rem;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.card h2{
+    margin-bottom:1rem;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.project{
+    padding:1.5rem;
+    background:var(--bg-color);
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+}
+
+.project h3{
+    color:var(--primary-color);
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+.contact-form textarea{
+    min-height:120px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* =========================
+   TABLET VIEW
+========================= */
+
+@media (min-width: 768px){
+
+    .hero{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+/* =========================
+   DESKTOP VIEW
+========================= */
+
+@media (min-width: 1024px){
+
+    .grid-container{
+        max-width:1200px;
+        margin:auto;
+    }
+
+    .project-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+}
