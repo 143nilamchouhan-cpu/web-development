@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilam Chouhan codes</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2 class="logo">Portfolio</h2>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle">🌙</button>
+    </header>
+
+    <main class="grid-container">
+
+        <section id="home" class="hero">
+            <div>
+                <h1>Hello, I'm Nilam</h1>
+                <p>Web Developer | CSE Student | Problem Solver</p>
+                <a href="RESUME (1).pdf" download class="btn">
+                 Download Resume
+                 </a>
+            </div>
+
+            <img width="50" src="myimage.png"
+                 alt="Profile Image">
+        </section>
+
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                Passionate web developer focused on creating
+                responsive and user-friendly applications using
+                modern web technologies.
+            </p>
+        </section>
+
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive personal portfolio.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Weather App</h3>
+                    <p>Real-time weather forecast.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Task Manager</h3>
+                    <p>Productivity management tool.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button class="btn">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Nilam Chouhan | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById("theme-toggle");
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            toggleBtn.textContent =
+                document.body.classList.contains("dark-mode")
+                ? "☀️"
+                : "🌙";
+        });
+    </script>
+
+</body>
+</html>
